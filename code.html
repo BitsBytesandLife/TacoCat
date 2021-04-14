@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- day 1 -->
+    <!-- <link rel="stylesheet" href="/css/tacocat.css"> -->
+    <!-- day 2 -->
+    <!-- <link rel="stylesheet" href="/css/soaf.css"> -->
+    <!-- day 3 -->
+    <!-- <link rel="stylesheet" href="/css/sunsethills.css"> -->
+    <!-- day 4 -->
+    <!-- <link rel="stylesheet" href="/css/superdog.css"> -->
+    <!-- day 5 -->
+    <!-- <link rel="stylesheet" href="/css/superdog.css"> -->
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <!-- <link rel="stylesheet" href="/css/sample.css"> -->
+</head>
+
+<body class="line-numbers">
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">TACOCAT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="app.html">The App<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="code.html">See The Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="container-fluid">
+        <div class="container-fluid">
+            <br>
+            <br>
+            <div class="row">
+                <div class="col h3 text-center">
+                    <br />
+                    The 3 Functions that make TACOCAT cool!
+                </div>
+            </div>
+
+            <hr />
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col">
+                        <pre class=""><code class="language-javascript">reverseString() {
+//use the RegExp to remove unwanted characters from it
+var re = /[\W_]/g;
+                        
+//Get the user's word
+let userWord = document.getElementById("tacoCat").value.toLowerCase()
+//Sanatize the string
+let cleanedWord = userWord.replace(re, '');
+                        
+//Do something here with it
+let start = cleanedWord.length - 1;
+let reverseWord = "";
+let palindrome = "";
+                        
+                        
+stringLengthCheck(userWord.length);
+                        
+                        
+for (let i = start; i >= 0; i--) {
+reverseWord += cleanedWord[i];
+}
+                        
+palindrome = palindromeCheck(cleanedWord, reverseWord);
+                        
+output = document.getElementById("tacoOutput");
+output.innerText = "Your string reversed is: " + reverseWord;
+                        
+output = document.getElementById("resultsOutput");
+output.innerText = palindrome;
+}
+</code>
+</pre>
+                        <hr>
+                        <pre class=""><code class="language-javascript">function palindromeCheck(origrnalString, reverseString) {
+let palindromeCheckResult = "";
+if (reverseString === origrnalString) {
+palindromeCheckResult = "This is vaild palindrome."
+} else {
+palindromeCheckResult = "This is Not vaild palindrome."
+}
+return palindromeCheckResult;
+}
+</code>
+</pre>
+                        <pre class=""><code class="language-javascript">
+function stringLengthCheck(orginalStringLen) {
+if (orginalStringLen <= 2) {
+    //TODO add SweetAlert2
+    alert("Your String Needs to have at least 2 leters or numbners")
+}
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <span class="text-muted">Copyright &copy;
+                        2021 BK, All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="/js/prism.js"></script>
+</body>
+
+</html>
