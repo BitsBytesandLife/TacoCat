@@ -38,10 +38,10 @@ function palindromeCheck(origrnalString, reverseString) {
     //if the words are equal the its palindrome
     //it s not a palindromeCheckResult 
     if (reverseString == origrnalString) {
-        palindromeCheckResult = "This is vaild palindrome. TacoCat owes you 2 tacos"
+        palindromeCheckResult = "This is vaild palindrome. TacoCat owes you 2 tacos."
         //palindromeBool = true;
     } else {
-        palindromeCheckResult = "This is Not vaild palindrome. Sorry no tacos for you"
+        palindromeCheckResult = "This is Not vaild palindrome. Sorry no tacos for you."
     }
 
     //palindromeSuccess(palindromeBool, userWord);
